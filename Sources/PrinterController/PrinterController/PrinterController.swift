@@ -35,6 +35,7 @@ public actor PrinterController: ObservableObject {
   @MainActor
   @Published public var printerQueueState = PrinterQueueState()
   
+    
   @MainActor
 	@Published public var updateInterval: TimeInterval? = 0.2
   

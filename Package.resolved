@@ -3,11 +3,11 @@
     "pins": [
       {
         "package": "Socket",
-        "repositoryURL": "https://github.com/SwiftVISA/BlueSocket.git",
+        "repositoryURL": "https://github.com/IBM-Swift/BlueSocket.git",
         "state": {
-          "branch": "master",
-          "revision": "7b23a867008e0027bfd6f4d398d44720707bc8ca",
-          "version": null
+          "branch": null,
+          "revision": "c9894fd117457f1d006575fbfb2fdfd6f79eac03",
+          "version": "1.0.200"
         }
       },
       {
@@ -16,15 +16,6 @@
         "state": {
           "branch": "actor",
           "revision": "229f53ba130653b4945188a94a0bbeea5d21ea6f",
-          "version": null
-        }
-      },
-      {
-        "package": "swift-collections",
-        "repositoryURL": "https://github.com/apple/swift-collections",
-        "state": {
-          "branch": "release/1.1",
-          "revision": "e166904974a242273c49cd51e4b9fc2a43897511",
           "version": null
         }
       },
@@ -41,8 +32,8 @@
         "package": "XPSQ8Kit",
         "repositoryURL": "https://github.com/HildrethResearchGroup/XPSQ8Kit.git",
         "state": {
-          "branch": "master",
-          "revision": "1ef01810a15293874421d32171c26ba549ef66d3",
+          "branch": "actor",
+          "revision": "c45c281d022720ea0537346780290d9a3e75c529",
           "version": null
         }
       }
