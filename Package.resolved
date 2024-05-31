@@ -1,0 +1,52 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Socket",
+        "repositoryURL": "https://github.com/SwiftVISA/BlueSocket.git",
+        "state": {
+          "branch": "master",
+          "revision": "7b23a867008e0027bfd6f4d398d44720707bc8ca",
+          "version": null
+        }
+      },
+      {
+        "package": "CoreSwiftVISA",
+        "repositoryURL": "https://github.com/SwiftVISA/CoreSwiftVISA.git",
+        "state": {
+          "branch": "actor",
+          "revision": "229f53ba130653b4945188a94a0bbeea5d21ea6f",
+          "version": null
+        }
+      },
+      {
+        "package": "swift-collections",
+        "repositoryURL": "https://github.com/apple/swift-collections",
+        "state": {
+          "branch": "release/1.1",
+          "revision": "e166904974a242273c49cd51e4b9fc2a43897511",
+          "version": null
+        }
+      },
+      {
+        "package": "SwiftVISASwift",
+        "repositoryURL": "https://github.com/SwiftVISA/SwiftVISASwift.git",
+        "state": {
+          "branch": "actor",
+          "revision": "1ccb532a7967fb0c37a503d2aa15f999991bae2d",
+          "version": null
+        }
+      },
+      {
+        "package": "XPSQ8Kit",
+        "repositoryURL": "https://github.com/HildrethResearchGroup/XPSQ8Kit.git",
+        "state": {
+          "branch": "master",
+          "revision": "1ef01810a15293874421d32171c26ba549ef66d3",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
