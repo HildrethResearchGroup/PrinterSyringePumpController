@@ -37,7 +37,7 @@ extension PrinterController {
 	func updateMultimeterState() async throws {
 		try await setMultimeterState(\.rawResistance, to: multimeterController?.rawResistance)
 	}
-	
+	//TODO: add updatePumpState
 	@MainActor
 	func setMultimeterState<T>(_ keypath: WritableKeyPath<MultimeterState, T>, to value: T) {
 		multimeterState[keyPath: keypath] = value
@@ -52,7 +52,12 @@ extension PrinterController {
   func setPrinterQueueState<T>(_ keypath: WritableKeyPath<PrinterQueueState, T>, to value: T) {
     printerQueueState[keyPath: keypath] = value
   }
-  
+    //TODO: add setPumpState
+    @MainActor
+    func setPumpState<T>(_ keypath: WritableKeyPath<PumpState, T>, to value: T) {
+      pumpState[keyPath: keypath] = value
+    }
+    
   @MainActor
   func setXPSQ8LastSetDisplacementMode(in dimension: Dimension, to displacementMode: DisplacementMode) {
     switch dimension {
