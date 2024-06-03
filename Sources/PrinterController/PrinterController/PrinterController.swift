@@ -40,10 +40,13 @@ public actor PrinterController: ObservableObject {
   @MainActor
   @Published public var printerQueueState = PrinterQueueState()
   
+    @MainActor
+    @Published public var pumpState = PumpState()
     
   @MainActor
 	@Published public var updateInterval: TimeInterval? = 0.2
   
+    // TODO: add updateState for pumpState
   public init() async {
     Task {
       await withTaskGroup(of: Void.self) { taskGroup in
@@ -116,7 +119,8 @@ public extension PrinterController {
 			throw error
 		}
 	}
-  
+  //TODO: add connectToPump
+    
   func disconnectFromWaveform() async {
     waveformController = nil
     await setState(instrument: .waveform, state: .notConnected)
