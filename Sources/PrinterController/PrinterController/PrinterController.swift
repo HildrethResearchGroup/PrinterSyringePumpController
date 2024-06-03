@@ -21,8 +21,11 @@ public actor PrinterController: ObservableObject {
   @MainActor
   @Published public var waveformConnectionState = CommunicationState.notConnected
 	
-	@MainActor
-	@Published public var multimeterConnectionState = CommunicationState.notConnected
+  @MainActor
+  @Published public var multimeterConnectionState = CommunicationState.notConnected
+    
+  @MainActor
+  @Published public var pumpConnectionState = CommunicationState.notConnected
   
   @MainActor
   @Published public var xpsq8State = XPSQ8State()

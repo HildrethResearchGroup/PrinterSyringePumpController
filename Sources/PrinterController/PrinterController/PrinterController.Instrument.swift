@@ -9,7 +9,7 @@ extension PrinterController {
   enum Instrument {
     case xpsq8
     case waveform
-		case multimeter
-      case syringePump
+
+      
   }
 }
