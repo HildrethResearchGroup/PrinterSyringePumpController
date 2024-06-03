@@ -138,6 +138,10 @@ public extension PrinterController {
     await setState(instrument: .waveform, state: .ready)
   }
   
+  func initializePump() async throws {
+      await setState(instrument: .pump, state: .ready)
+  }
+    
   func initializeXPSQ8() async throws {
 //    guard let xpsq8Controller = xpsq8Controller else { throw Error.instrumentNotConnected }
 //		try await xpsq8Controller.restart()
