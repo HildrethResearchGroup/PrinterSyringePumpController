@@ -13,6 +13,7 @@ public actor PrinterController: ObservableObject {
   var waveformController: WaveformController?
 	var multimeterController: MultimeterController?
 	var xpsq8CollectiveController: XPSQ8CollectiveController?
+    
   
   @MainActor
   @Published public var xpsq8ConnectionState = CommunicationState.notConnected
