@@ -92,13 +92,15 @@ extension PrinterController {
   @MainActor
   func setState(instrument: Instrument, state: CommunicationState) {
     switch instrument {
-    case .xpsq8:
-      xpsq8ConnectionState = state
-    case .waveform:
-      waveformConnectionState = state
-		case .multimeter:
-			multimeterConnectionState = state
-    }
+        case .xpsq8:
+          xpsq8ConnectionState = state
+        case .waveform:
+          waveformConnectionState = state
+        case .multimeter:
+            multimeterConnectionState = state
+        case .pump:
+            pumpConnectionState = state
+        }
   }
   
   @MainActor
@@ -108,10 +110,12 @@ extension PrinterController {
       return xpsq8ConnectionState
     case .waveform:
       return waveformConnectionState
-		case .multimeter:
-			return multimeterConnectionState
+    case .multimeter:
+      return multimeterConnectionState
+    case .pump:
+      return pumpConnectionState
+        }
     }
-  }
 }
 
 // MARK: - Instrument State Management
