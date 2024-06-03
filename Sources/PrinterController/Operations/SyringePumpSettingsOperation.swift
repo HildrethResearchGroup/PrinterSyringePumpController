@@ -14,6 +14,9 @@ public struct SyringePumpSettingsConfiguration: Hashable, Codable {
   public var flowRate2: Double?
   public var enable1: Bool?
   public var enable2: Bool?
+  public var id1: Double?
+  public var id2: Double?
+    
   
   
   public init() { }
@@ -29,25 +32,16 @@ extension PrinterOperation {
       configuration: .init(),
       name: "Syringe Pump Settings",
       thumbnailName: "syringe.fill", body: body) { configuration, printerController in
-        if let flowRate1 = configuration.flowRate1 {
-          try await printerController.setFlowRate1(to: flowRate1) //these call a function that calls another function in SyringePumpController
-        }
-        
-        if let flowRate2 = configuration.flowRate2 {
-          try await printerController.setAmplifiedVoltage(to: flowRate2)
-        }
-        
-        if let offset = configuration.offset {
-          try await printerController.setAmplifiedVoltageOffset(to: offset)
-        }
-        
-        if let phase = configuration.phase {
-          try await printerController.setPhase(to: phase)
-        }
-        
-        if let waveFunction = configuration.waveFunction {
-          try await printerController.setWaveFunction(to: waveFunction)
-        }
+          
+          
+//        if let flowRate1 = configuration.flowRate1 {
+//          try await printerController.setFlowRate1(to: flowRate1) //these call a function that calls another function in SyringePumpController
+//        }
+//        
+//        if let flowRate2 = configuration.flowRate2 {
+//          try await printerController.setAmplifiedVoltage(to: flowRate2)
+//        }
+    
       }
   }
 }
