@@ -57,7 +57,7 @@ public class SyringePumpController: ObservableObject {
     /*
      sets given pump to pump at given number of given units
      */
-    public func setRate(for pump: String, to quantity: String, of units: String) {
+    public func setRate(for pump: String, to quantity: String, of units: String) async {
         self.send("")
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             self.send("\(pump)FUN RAT") // starting pump
@@ -71,7 +71,7 @@ public class SyringePumpController: ObservableObject {
      sets the size of the inner diameter of the syringe. input is not validated.
      units are in mm we think?
      */
-    public func setInnerDiameter(for pump: String, to diameter: String) {
+    public func setInnerDiameter(for pump: String, to diameter: String) async {
         self.send("")
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             self.send("\(pump)DIA \(diameter)") // starting pump
@@ -82,7 +82,7 @@ public class SyringePumpController: ObservableObject {
      sends basic start command to pump of given number
      input is not checked or validated
      */
-    public func startPumping(pump: String) {
+    public func startPumping(pump: String) async {
         self.send("") // Sending empty string first seems to make things more consistent
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             self.send("\(pump)RUN") // starting pump
@@ -93,7 +93,7 @@ public class SyringePumpController: ObservableObject {
      sends command to start pump of given number
      input is not checked or validated
      */
-    public func stopPumping(pump: String) {
+    public func stopPumping(pump: String) async {
         send("\(pump)STP")
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             self.send("\(pump)STP") // entering rate mode

@@ -9,28 +9,28 @@ import Foundation
 
 
 public extension PrinterController {
-    func setFlowRate1(to flowRate1: Double) async throws {
-        // TODO: 
+    func setFlowRate1(to quantity: String, of units:String) async throws {
+        // TODO:
         try await with(.pump) {
-          try await waveformController?.setRawVoltage(to: flowRate1)
+            try await syringePumpController?.setRate(for: "00", to: quantity, of: units)
         }
     }
 
-    func setFlowRate2(to flowRate2: Double) async throws {
+    func setFlowRate2(to quantity: String, of units:String) async throws {
       try await with(.pump) {
-        try await waveformController?.setRawVoltage(to: flowRate1)
+          try await syringePumpController?.setRate(for: "01", to: quantity, of: units)
       }
     }
 
-    func setInnerDiameter1(to voltage: Double) async throws {
-        try await with(.waveform) {
-            try await waveformController?.setAmplifiedVoltage(to: voltage)
+    func setInnerDiameter1(to value: String) async throws {
+        try await with(.pump) {
+            try await syringePumpController?.setInnerDiameter(for: "00", to: value)
         }
     }
 
-    func setInnerDiameter2(to offset: Double) async throws {
-        try await with(.waveform) {
-            try await waveformController?.setAmplifiedVoltageOffset(to: offset)
+    func setInnerDiameter2(to value: String) async throws {
+        try await with(.pump) {
+            try await syringePumpController?.setInnerDiameter(for: "01", to: value)
         }
     }
     
